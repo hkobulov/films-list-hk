@@ -4,10 +4,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container-fluid row justify-content-evenly center">
+        
+        
+        <div class="col-4 mt-4 pt-2 form-area">
+            <form class="form mb-4" method="GET">
+                <div>
+                    <label class="label-form" for="film_name"></label>
+                    
+                    <input class="form-control" type="text" id="film_name" placeholder="Film name">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="label-form" for="film_number"></label>
+                    
+                    <input class="form-control" type="number" id="film_number">
+                </div>
+                
+                <div class="mb-3">
+                    <select class="form-select text-secondary" aria-label="Default select example">
+                        <option selected>All</option>
+                        <option value="historical">Historical</option>
+                        <option value="politic">Politic</option>
+                        <option value="detective">Detective</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <select class="form-select text-secondary" aria-label="Default select example">
+                        <option selected>Rating (high to low)</option>
+                        <option value="low_high">Rating (low to high)</option>
+                        <option value="new_old">Rating (new to old)</option>
+                        <option value="old_new">Rating (old to new)</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary w-100">Search</button>
+            </form>
+            
+            <div class="bookmark">
+                <h2 class="h2">Bookmarked movies</h2>
+                
+                <ul class="list-unstyled border border-1 border-secondary rounded">
+                    <li class="p-3 border-bottom border-bottom-1 border-dark">
+                        <h3 class="h5">
+                            Avengers: Infinity War
+                        </h3>
+                        
+                        <button class="btn btn-danger">Remove</button>
+                    </li>
+                    
+                    <li class="p-3 border-bottom border-bottom-1 border-dark">
+                        <h3 class="h5">
+                            The Avengers
+                        </h3>
+                        
+                        <button class="btn btn-danger">Remove</button>
+                    </li>
+                    
+                    <li class="p-3">
+                        <h3 class="h5">
+                            12 Years a Slave
+                        </h3>
+                        
+                        <button class="btn btn-danger">Remove</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-7 film-area">
+            <h1 class="h1">
+                Movies
+            </h1>
+            
+            <h2 class="h3">
+                Search results: 39
+            </h2>
+            
+            <form>
+                <input type="text" class="form-control py-2 mb-3 px-3 bg-info" placeholder="Use the form on the left to search for a movie">
+            </form>
+            
+            <div class="row justify-content-between">
+                <div class="row mb-3 p-0 pb-3 rounded col-6 film justify-content-evenly border border-1 border-secondary">
+                    <iframe class="col-12 mb-3 p-0" width="300" height="200" src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <h3 class="h5 mb-3">
+                        Avengers: Infinity War
+                    </h3>
+                    
+                    <time class="mb-3">
+                        <img src="./images/icon-calendar.png" alt="Icon star" width="25" height="25">
+                        2018
+                    </time>
+                    
+                    <strong class="mb-3">
+                        <img src="./images/icon-star.png" alt="Icon star" width="25" height="25">
+                        8.7
+                    </strong>
+                    
+                    <a class="col-4 btn border border-1 border-primary stretched-link" href="https://www.youtube.com/embed/6ZfuNTqbHE8">
+                        Watch trailer
+                    </a>
+                    
+                    <a class="col-4 btn border border-1 border-primary stretched-link" href="#">
+                        More info
+                    </a>
+                    
+                    <a class="col-3 btn border border-1 border-primary stretched-link" href="#">
+                        Bookmark
+                    </a>
+                </div>
+                
+                <div class="row mb-3 p-0 pb-3 rounded col-6 film justify-content-evenly border border-1 border-secondary">
+                    <iframe class="col-12 mb-3 p-0" width="300" height="200" src="https://www.youtube.com/embed/eOrNdBpGMv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <h3 class="h5 mb-3">
+                        The Avengers
+                    </h3>
+                    
+                    <time class="mb-3">
+                        <img src="./images/icon-calendar.png" alt="Icon star" width="25" height="25">
+                        2012
+                    </time>
+                    
+                    <strong class="mb-3">
+                        <img src="./images/icon-star.png" alt="Icon star" width="25" height="25">
+                        8.1
+                    </strong>
+                    
+                    <a class="col-4 btn border border-1 border-primary stretched-link" href="https://www.youtube.com/embed/6ZfuNTqbHE8">
+                        Watch trailer
+                    </a>
+                    
+                    <a class="col-4 btn border border-1 border-primary stretched-link" href="#">
+                        More info
+                    </a>
+                    
+                    <a class="col-3 btn border border-1 border-primary stretched-link" href="#">
+                        Bookmark
+                    </a>
+                </div>
+                
+                <nav aria-label="...">
+                    <ul class="pagination pagination-sm justify-content-center">
+                      <li class="page-item active" aria-current="page">
+                        <span class="page-link">1</span>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
